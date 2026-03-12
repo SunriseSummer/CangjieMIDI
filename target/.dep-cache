@@ -1,0 +1,510 @@
+{
+  "bin": {},
+  "pkg-build": {
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src": {
+      "package": "midi",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.decoder",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "midi.encoder",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier_utils.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.fs",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder": {
+      "package": "midi.decoder",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.core",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_decoder.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_analysis.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_decoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_duration.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_grouping.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_types.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.fs",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/decoder.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder": {
+      "package": "midi.encoder",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.core",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/encoder.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/event.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_events.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/utils.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.convert",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_events.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core": {
+      "package": "midi.core",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/instrument.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser_note.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/types.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.convert",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    }
+  },
+  "pkg-test": {
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder": {
+      "package": "midi.decoder",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.core",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_decoder.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_analysis.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_decoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_duration.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_grouping.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/score_types.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.fs",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decoder/decoder.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src": {
+      "package": "midi",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.core",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_test.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "midi.decoder",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_test.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "midi.encoder",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_test.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/readable_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_extra_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier_utils.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.fs",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_score_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/decompile_test.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/main.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/verifier.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder": {
+      "package": "midi.encoder",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [
+        {
+          "orPackage": "",
+          "package": "midi.core",
+          "isStd": false,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/encoder.cj"
+            }
+          ]
+        }
+      ],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/event.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_events.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/utils.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.convert",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_encoder.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/encoder/readable_events.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    },
+    "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core": {
+      "package": "midi.core",
+      "isMacro": false,
+      "accessLevel": "public",
+      "timeStamp": 1773333942,
+      "dependencies": [],
+      "std-dependencies": [
+        {
+          "orPackage": "",
+          "package": "std.collection",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/instrument.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser_note.cj"
+            },
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/types.cj"
+            }
+          ]
+        },
+        {
+          "orPackage": "",
+          "package": "std.convert",
+          "isStd": true,
+          "imports": [
+            {
+              "file": "/home/runner/work/CangjieMIDI/CangjieMIDI/src/core/parser.cj"
+            }
+          ]
+        }
+      ],
+      "testUsed": false,
+      "mockUsed": false
+    }
+  }
+}

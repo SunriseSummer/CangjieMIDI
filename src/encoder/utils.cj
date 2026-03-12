@@ -68,9 +68,15 @@ func noteNameToMidi(name: String): Int64 {
 
 // ── 格式检测 ──
 
-// 判断输入是否为 MIDI 可读事件格式（以 "MIDI" 开头）
+// 判断输入是否为事件模式格式（以 "midi" 开头）
 func isMidiReadableFormat(input: String): Bool {
-    input.trimAscii().startsWith("MIDI")
+    let trimmed = input.trimAscii()
+    for (line in trimmed.split("\n")) {
+        let stripped = line.trimAscii()
+        if (stripped.isEmpty() || stripped.startsWith("//")) { continue }
+        return stripped.startsWith("midi")
+    }
+    false
 }
 
 // ── 字符串工具 ──
