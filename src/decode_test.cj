@@ -2,7 +2,6 @@ package midi
 
 import std.fs.*
 import std.collection.*
-import midi.core.*
 import midi.encoder.*
 import midi.decoder.*
 

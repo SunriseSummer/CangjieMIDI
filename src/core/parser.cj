@@ -162,12 +162,10 @@ func parseTrackContent(tokens: ArrayList<String>, track: TrackData, score: Score
             let chordBuf = StringBuilder()
             chordBuf.append(tok)
             var j = i + 1
-            var foundEnd = false
             while (j < tokens.size) {
                 chordBuf.append(" ")
                 chordBuf.append(tokens[j])
                 if (tokens[j].contains("]:") || tokens[j].contains("]")) {
-                    foundEnd = true
                     j++
                     break
                 }
@@ -175,9 +173,15 @@ func parseTrackContent(tokens: ArrayList<String>, track: TrackData, score: Score
             }
             let chordStr = chordBuf.toString()
             // Parse: [C3 E3 G3]:2
-            let bracketEnd = chordStr.indexOf("]")
+            let rr = chordStr.toRuneArray()
+            // Find ']' manually
+            var bracketEnd: Int64 = -1
+            var bi: Int64 = 0
+            while (bi < rr.size) {
+                if (rr[bi] == r']') { bracketEnd = bi; break }
+                bi++
+            }
             if (bracketEnd >= 0) {
-                let rr = chordStr.toRuneArray()
                 let content = String(rr[1..bracketEnd])
                 var durStr = "4"
                 // After ], check for :duration

@@ -294,10 +294,16 @@ func generateEvent(input: String): Array<UInt8> {
 
     for (line in input.split("\n")) {
         var trimmed = line.trimAscii()
-        let commentIdx = trimmed.indexOf("//")
-        if (commentIdx >= 0) {
-            let r = trimmed.toRuneArray()
-            trimmed = String(r[0..commentIdx]).trimAscii()
+        // Strip inline comments
+        let tr = trimmed.toRuneArray()
+        var commentPos: Int64 = -1
+        var ci: Int64 = 0
+        while (ci + 1 < tr.size) {
+            if (tr[ci] == r'/' && tr[ci + 1] == r'/') { commentPos = ci; break }
+            ci++
+        }
+        if (commentPos >= 0) {
+            trimmed = String(tr[0..commentPos]).trimAscii()
         }
         if (trimmed.isEmpty()) { continue }
 

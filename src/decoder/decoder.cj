@@ -1,7 +1,6 @@
 package midi.decoder
 
 import std.fs.*
-import std.collection.*
 
 // ============================================================
 // MIDI 反编译器 — 统一事件格式输出（无损）
