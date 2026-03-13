@@ -391,6 +391,6 @@ class ScoreExtraTests {
             verifyBinaryIdentical(data, data2)
             count++
         }
-        @Assert(count >= 20)
+        @Assert(count >= 37)
     }
 }
