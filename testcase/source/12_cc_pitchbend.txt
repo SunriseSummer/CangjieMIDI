@@ -1,0 +1,28 @@
+// CC 控制器与弯音 — 表情控制
+tempo 100
+
+track "lead" {
+    instrument "violin"
+    velocity 85
+    cc 7 100       // 音量
+    cc 10 64       // 声像居中
+    cc 91 50       // 混响
+    A4:4  B4:4  C5:4  D5:4
+    cc 11 127      // 表情拉满
+    E5:2
+    cc 11 80       // 表情减弱
+    D5:4  C5:4
+    pitch_bend 0 80
+    B4:2
+    pitch_bend 0 64
+    A4:2
+}
+
+track "pad" {
+    instrument "strings"
+    velocity 60
+    [A3 C4 E4]:1
+    [D3 F3 A3]:1
+    [E3 G#3 B3]:1
+    [A3 C4 E4]:1
+}

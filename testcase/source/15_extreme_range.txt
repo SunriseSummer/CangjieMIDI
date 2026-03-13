@@ -1,0 +1,20 @@
+// 极端音域测试 — 从 C1 到 C8
+tempo 120
+
+track "low" {
+    instrument "bass"
+    C1:4  D1:4  E1:4  F1:4
+    G1:4  A1:4  B1:4  C2:4
+}
+
+track "mid" {
+    instrument "piano"
+    C4:4  D4:4  E4:4  F4:4
+    G4:4  A4:4  B4:4  C5:4
+}
+
+track "high" {
+    instrument "flute"
+    C7:4  D7:4  E7:4  F7:4
+    G7:4  A7:4  B7:4  C8:4
+}

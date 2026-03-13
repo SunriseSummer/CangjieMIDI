@@ -1,0 +1,20 @@
+// 力度变化 — 渐强渐弱
+tempo 88
+
+track "melody" {
+    instrument "piano"
+    // pp 弱
+    velocity 40
+    C4:4  D4:4  E4:4  F4:4
+    // mf 中强
+    velocity 80
+    G4:4  A4:4  B4:4  C5:4
+    // ff 强
+    velocity 110
+    D5:4  E5:4  F5:4  G5:4
+    // pp 回弱
+    velocity 35
+    E5:2  C5:2
+    velocity 25
+    A4:1
+}

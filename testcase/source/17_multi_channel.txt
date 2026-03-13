@@ -1,0 +1,31 @@
+// 通道指定 — 多通道编排
+tempo 120
+
+track "piano" {
+    channel 0
+    instrument "piano"
+    C4:4  E4:4  G4:4  C5:4
+    E5:4  G5:4  C6:2
+}
+
+track "guitar" {
+    channel 2
+    instrument "guitar"
+    E3:2  A3:2
+    D3:2  G3:2
+}
+
+track "drums" {
+    channel 9
+    instrument "piano"
+    C4:8  C4:8  C4:8  C4:8
+    C4:8  C4:8  C4:8  C4:8
+    C4:4  C4:4  C4:4  C4:4
+}
+
+track "synth" {
+    channel 5
+    instrument "bright_piano"
+    [C4 E4 G4]:1
+    [F4 A4 C5]:1
+}

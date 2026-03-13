@@ -1,0 +1,32 @@
+// 变量与复用 — 展示 let 变量功能
+tempo 120
+
+let Am = { [A3 C4 E4]:2 }
+let Em = { [E3 G#3 B3]:2 }
+let Dm = { [D3 F3 A3]:2 }
+
+track "melody" {
+    instrument "piano"
+    velocity 90
+    A4:4  B4:4  C5:4  D5:4
+    E5:2  _:4  D5:4
+    C5:4  B4:4  A4:2
+    E5:4  D5:4  C5:4  B4:4
+    A4:4  G#4:4  A4:2
+}
+
+track "harmony" {
+    instrument "strings"
+    Am Am
+    Dm Em
+    Am Dm
+    Em Am
+}
+
+track "bass" {
+    instrument "bass"
+    A2:2  C3:2
+    D3:2  E3:2
+    A2:2  D3:2
+    E2:2  A2:2
+}
