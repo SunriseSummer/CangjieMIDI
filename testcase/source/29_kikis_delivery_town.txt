@@ -1,0 +1,117 @@
+// 久石让 — 魔女宅急便主题曲《海の見える街》（看得见海的街道）
+// 四轨交响编曲
+tempo 112
+
+// 和弦变量
+let Am = { [A3 C4 E4]:2 }
+let Em = { [E3 G3 B3]:2 }
+let F = { [F3 A3 C4]:2 }
+let C = { [C3 E3 G3]:2 }
+let Dm = { [D3 F3 A3]:2 }
+let G = { [G3 B3 D4]:2 }
+let E = { [E3 G#3 B3]:2 }
+let Bdim = { [B3 D4 F4]:2 }
+
+// 轨道1: 小提琴主旋律
+track "violin" {
+    instrument "violin"
+    velocity 85
+    // 主题 A
+    A4:4  B4:8  C5:8  D5:4  E5:4
+    F5:4  E5:4  D5:4  C5:4
+    B4:4  C5:8  D5:8  E5:4  C5:4
+    A4:2  _:2
+    // 主题 A 变化
+    A4:4  B4:8  C5:8  D5:4  E5:4
+    F5:4  E5:4  D5:8  E5:8  D5:4
+    C5:4  B4:4  A4:4  G#4:4
+    A4:2  _:2
+    // 主题 B — 高潮
+    E5:4  F5:4  G5:4  F5:4
+    E5:4  D5:4  C5:2
+    D5:4  E5:4  F5:4  E5:4
+    D5:4  C5:4  B4:2
+    // 再现
+    A4:4  B4:8  C5:8  D5:4  E5:4
+    F5:4  E5:4  D5:4  C5:4
+    B4:4  A4:4  G#4:4  A4:4
+    A4:1
+}
+
+// 轨道2: 长笛装饰旋律
+track "flute" {
+    instrument "flute"
+    velocity 70
+    // 主题 A — 高八度点缀
+    _:2  A5:8  G5:8  F5:4
+    _:2  E5:4  D5:4
+    _:2  G5:8  F5:8  E5:4
+    C5:2  _:2
+    // 主题 A 变化
+    _:2  A5:8  G5:8  F5:4
+    _:2  A5:4  G5:4
+    E5:4  D5:4  C5:4  B4:4
+    C5:2  _:2
+    // 主题 B
+    G5:2  A5:2
+    G5:4  F5:4  E5:2
+    F5:2  G5:2
+    F5:4  E5:4  D5:2
+    // 再现
+    _:2  A5:4  G5:4
+    F5:2  E5:2
+    D5:4  C5:4  B4:4  C5:4
+    A4:1
+}
+
+// 轨道3: 弦乐和弦（变量复用）
+track "strings" {
+    instrument "strings"
+    velocity 60
+    // 主题 A
+    Am G
+    F C
+    Dm Em
+    Am Am
+    // 主题 A 变化
+    Am G
+    F C
+    Dm E
+    Am Am
+    // 主题 B
+    F G
+    C Am
+    Dm G
+    Bdim Em
+    // 再现
+    Am G
+    F C
+    Dm E
+    Am Am
+}
+
+// 轨道4: 大提琴低音线
+track "cello" {
+    instrument "cello"
+    velocity 65
+    // 主题 A
+    A2:2  G2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:2  A2:2
+    // 主题 A 变化
+    A2:2  G2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:2  A2:2
+    // 主题 B
+    F2:2  G2:2
+    C3:2  A2:2
+    D3:2  G2:2
+    B2:2  E2:2
+    // 再现
+    A2:2  G2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:1
+}

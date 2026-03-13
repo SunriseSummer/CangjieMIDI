@@ -1,0 +1,116 @@
+// 久石让 — 龙猫主题曲《となりのトトロ》（邻家的龙猫）
+// 四轨交响编曲
+tempo 132
+
+// 和弦变量
+let C = { [C3 E3 G3]:2 }
+let F = { [F3 A3 C4]:2 }
+let G = { [G3 B3 D4]:2 }
+let Am = { [A3 C4 E4]:2 }
+let Dm = { [D3 F3 A3]:2 }
+let Em = { [E3 G3 B3]:2 }
+let G7 = { [G3 B3 D4 F4]:2 }
+
+// 轨道1: 钢琴主旋律
+track "piano" {
+    instrument "piano"
+    velocity 90
+    // 主歌 A
+    C4:4  E4:4  G4:4  E4:4
+    F4:4  A4:4  G4:2
+    E4:4  F4:4  G4:4  A4:4
+    G4:4  F4:4  E4:2
+    // 主歌 A 重复
+    C4:4  E4:4  G4:4  E4:4
+    A4:4  G4:4  F4:4  E4:4
+    D4:4  E4:4  F4:4  D4:4
+    C4:2  _:2
+    // 副歌 B — 欢快旋律
+    G4:4  A4:4  B4:4  C5:4
+    D5:4  C5:4  B4:4  A4:4
+    G4:4  A4:4  B4:8  C5:8  B4:4
+    A4:4  G4:4  A4:2
+    // 终曲
+    C5:4  B4:4  A4:4  G4:4
+    A4:4  G4:4  F4:4  E4:4
+    D4:4  E4:4  F4:4  G4:4
+    C4:1
+}
+
+// 轨道2: 长笛装饰
+track "flute" {
+    instrument "flute"
+    velocity 75
+    // 主歌 A — 高音点缀
+    _:2  E5:4  D5:4
+    C5:4  _:4  B4:2
+    _:2  C5:4  D5:4
+    E5:4  D5:4  C5:2
+    // 主歌 A 重复
+    _:2  E5:4  D5:4
+    C5:2  _:2
+    _:1
+    _:1
+    // 副歌 B
+    _:2  D5:4  E5:4
+    F5:4  E5:4  D5:2
+    _:2  D5:4  E5:4
+    C5:2  _:2
+    // 终曲
+    E5:4  D5:4  C5:4  B4:4
+    C5:2  A4:2
+    _:2  A4:4  B4:4
+    C5:1
+}
+
+// 轨道3: 弦乐和弦（变量复用）
+track "strings" {
+    instrument "strings"
+    velocity 60
+    // 主歌 A
+    C F
+    F G
+    C Am
+    G C
+    // 主歌 A 重复
+    C F
+    Am Em
+    Dm G
+    C C
+    // 副歌 B
+    C G
+    F C
+    Em Am
+    Dm G
+    // 终曲
+    Am Em
+    F C
+    Dm G7
+    C C
+}
+
+// 轨道4: 低音提琴
+track "contrabass" {
+    instrument "bass"
+    velocity 65
+    // 主歌 A
+    C3:2  F2:2
+    F2:2  G2:2
+    C3:2  A2:2
+    G2:2  C3:2
+    // 主歌 A 重复
+    C3:2  F2:2
+    A2:2  E2:2
+    D3:2  G2:2
+    C3:2  C3:2
+    // 副歌 B
+    C3:2  G2:2
+    F2:2  C3:2
+    E2:2  A2:2
+    D3:2  G2:2
+    // 终曲
+    A2:2  E2:2
+    F2:2  C3:2
+    D3:2  G2:2
+    C3:1
+}

@@ -1,0 +1,115 @@
+// 久石让 — 千与千寻主题曲《いつも何度でも》（永远常在）
+// 四轨交响编曲
+tempo 80
+
+// 和弦变量
+let Am = { [A3 C4 E4]:2 }
+let Em = { [E3 G3 B3]:2 }
+let F = { [F3 A3 C4]:2 }
+let C = { [C3 E3 G3]:2 }
+let Dm = { [D3 F3 A3]:2 }
+let G = { [G3 B3 D4]:2 }
+let E = { [E3 G#3 B3]:2 }
+
+// 轨道1: 钢琴主旋律
+track "piano" {
+    instrument "piano"
+    velocity 80
+    // A段 — 序奏
+    E4:4  A4:4  B4:4  C5:4
+    B4:4  A4:4  G4:2
+    A4:4  B4:4  C5:4  D5:4
+    E5:2  _:2
+    // A段 — 重复
+    E4:4  A4:4  B4:4  C5:4
+    B4:4  A4:4  G4:4  E4:4
+    A4:4  G4:4  E4:4  D4:4
+    E4:2  _:2
+    // B段 — 展开
+    C5:4  D5:4  E5:4  D5:4
+    C5:4  B4:4  A4:2
+    B4:4  C5:4  D5:4  C5:4
+    B4:4  A4:4  G4:2
+    // 尾声
+    A4:4  B4:4  C5:4  B4:4
+    A4:4  G4:4  A4:2
+    E4:4  A4:4  B4:4  C5:4
+    A4:1
+}
+
+// 轨道2: 长笛副旋律
+track "flute" {
+    instrument "flute"
+    velocity 70
+    // A段
+    _:1
+    _:1
+    E5:4  D5:4  C5:4  B4:4
+    C5:2  _:2
+    _:1
+    _:1
+    C5:4  B4:4  A4:4  G4:4
+    A4:2  _:2
+    // B段
+    E5:2  _:4  G5:4
+    E5:4  D5:4  C5:2
+    D5:2  _:4  E5:4
+    D5:4  C5:4  B4:2
+    // 尾声
+    C5:2  D5:2
+    C5:4  B4:4  A4:2
+    _:2  E5:2
+    E5:1
+}
+
+// 轨道3: 弦乐和弦（使用变量复用）
+track "strings" {
+    instrument "strings"
+    velocity 65
+    // A段
+    Am Em
+    F C
+    Am Em
+    F C
+    // A段重复
+    Am Em
+    F C
+    Dm Em
+    Am Am
+    // B段
+    F G
+    Am Em
+    F G
+    Em Am
+    // 尾声
+    F G
+    Dm E
+    Am Em
+    Am Am
+}
+
+// 轨道4: 大提琴低音
+track "cello" {
+    instrument "cello"
+    velocity 70
+    // A段
+    A2:2  E2:2
+    F2:2  C3:2
+    A2:2  E2:2
+    F2:2  C3:2
+    // A段重复
+    A2:2  E2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:2  A2:2
+    // B段
+    F2:2  G2:2
+    A2:2  E2:2
+    F2:2  G2:2
+    E2:2  A2:2
+    // 尾声
+    F2:2  G2:2
+    D3:2  E2:2
+    A2:2  E2:2
+    A2:1
+}

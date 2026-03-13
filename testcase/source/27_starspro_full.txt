@@ -1,5 +1,11 @@
-// 小星星进阶版 — 三轨完整编曲
+// 小星星进阶版 — 三轨完整编曲（变量复用演示）
 tempo 108
+
+// 和弦变量定义
+let C = { [C3 E3 G3]:2 }
+let F = { [F3 A3 C4]:2 }
+let G7 = { [G3 B3 D4]:2 }
+let Am = { [A3 C4 E4]:2 }
 
 // 轨道1: 钢琴旋律
 track "melody" {
@@ -18,21 +24,21 @@ track "melody" {
     D4:4  D4:4  C4:2
 }
 
-// 轨道2: 弦乐和弦伴奏
+// 轨道2: 弦乐和弦伴奏（使用变量复用）
 track "harmony" {
     instrument "strings"
-    [C3 E3 G3]:2  [C3 E3 G3]:2
-    [F3 A3 C4]:2  [C3 E3 G3]:2
-    [F3 A3 C4]:2  [C3 E3 G3]:2
-    [G3 B3 D4]:2  [C3 E3 G3]:2
-    [C3 E3 G3]:2  [G3 B3 D4]:2
-    [A3 C4 E4]:2  [G3 B3 D4]:2
-    [C3 E3 G3]:2  [G3 B3 D4]:2
-    [A3 C4 E4]:2  [G3 B3 D4]:2
-    [C3 E3 G3]:2  [C3 E3 G3]:2
-    [F3 A3 C4]:2  [C3 E3 G3]:2
-    [F3 A3 C4]:2  [C3 E3 G3]:2
-    [G3 B3 D4]:2  [C3 E3 G3]:2
+    C C
+    F C
+    F C
+    G7 C
+    C G7
+    Am G7
+    C G7
+    Am G7
+    C C
+    F C
+    F C
+    G7 C
 }
 
 // 轨道3: 贝斯低音线

@@ -1,0 +1,116 @@
+// 久石让 — 幽灵公主主题曲《もののけ姫》
+// 四轨交响编曲
+tempo 72
+
+// 和弦变量
+let Am = { [A3 C4 E4]:2 }
+let Em = { [E3 G3 B3]:2 }
+let F = { [F3 A3 C4]:2 }
+let C = { [C3 E3 G3]:2 }
+let Dm = { [D3 F3 A3]:2 }
+let G = { [G3 B3 D4]:2 }
+let E = { [E3 G#3 B3]:2 }
+
+// 轨道1: 小提琴主旋律 — 史诗级深沉
+track "violin" {
+    instrument "violin"
+    velocity 80
+    // 序奏 — 幽远
+    E4:2  A4:2
+    C5:4  B4:4  A4:2
+    G4:4  A4:4  B4:4  C5:4
+    B4:2  A4:2
+    // 主题 A
+    A4:4  C5:4  E5:4  D5:4
+    C5:4  B4:4  A4:2
+    G4:4  A4:4  B4:4  A4:4
+    G4:4  F4:4  E4:2
+    // 主题 B — 高潮
+    E5:4  D5:4  C5:4  B4:4
+    A4:4  B4:4  C5:2
+    D5:4  C5:4  B4:4  A4:4
+    G#4:4  A4:4  B4:2
+    // 尾声 — 回归宁静
+    A4:4  G4:4  A4:4  B4:4
+    C5:4  B4:4  A4:2
+    E4:2  A4:2
+    A4:1
+}
+
+// 轨道2: 长笛伴奏 — 空灵
+track "flute" {
+    instrument "flute"
+    velocity 65
+    // 序奏
+    _:1
+    E5:4  D5:4  C5:2
+    _:1
+    _:2  E5:4  D5:4
+    // 主题 A
+    C5:2  _:2
+    _:2  E5:4  D5:4
+    _:1
+    _:2  A4:4  B4:4
+    // 主题 B
+    G5:2  _:2
+    _:2  E5:2
+    F5:2  _:2
+    _:2  D5:4  E5:4
+    // 尾声
+    _:1
+    E5:4  D5:4  C5:2
+    _:1
+    E5:1
+}
+
+// 轨道3: 弦乐和弦（变量复用）
+track "strings" {
+    instrument "strings"
+    velocity 55
+    // 序奏
+    Am Am
+    F Em
+    Dm Em
+    Em Am
+    // 主题 A
+    Am C
+    F Em
+    Dm Em
+    F E
+    // 主题 B
+    C Dm
+    Am Em
+    Dm G
+    E Am
+    // 尾声
+    Dm Em
+    F Am
+    Am Em
+    Am Am
+}
+
+// 轨道4: 大提琴低音
+track "cello" {
+    instrument "cello"
+    velocity 60
+    // 序奏
+    A2:2  A2:2
+    F2:2  E2:2
+    D3:2  E2:2
+    E2:2  A2:2
+    // 主题 A
+    A2:2  C3:2
+    F2:2  E2:2
+    D3:2  E2:2
+    F2:2  E2:2
+    // 主题 B
+    C3:2  D3:2
+    A2:2  E2:2
+    D3:2  G2:2
+    E2:2  A2:2
+    // 尾声
+    D3:2  E2:2
+    F2:2  A2:2
+    A2:2  E2:2
+    A2:1
+}

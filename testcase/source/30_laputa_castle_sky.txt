@@ -1,0 +1,116 @@
+// 久石让 — 天空之城主题曲《君をのせて》（伴随着你）
+// 四轨交响编曲
+tempo 100
+
+// 和弦变量
+let Am = { [A3 C4 E4]:2 }
+let Em = { [E3 G3 B3]:2 }
+let F = { [F3 A3 C4]:2 }
+let C = { [C3 E3 G3]:2 }
+let Dm = { [D3 F3 A3]:2 }
+let G = { [G3 B3 D4]:2 }
+let E = { [E3 G#3 B3]:2 }
+
+// 轨道1: 小提琴主旋律
+track "violin" {
+    instrument "violin"
+    velocity 85
+    // A段 — 主题呈示
+    A4:4  B4:4  C5:4.  B4:8
+    A4:4  G4:4  A4:2
+    F4:4  G4:4  A4:4.  G4:8
+    F4:4  E4:4  E4:2
+    // A段 — 重复
+    A4:4  B4:4  C5:4.  B4:8
+    A4:4  G4:4  E4:2
+    F4:4  E4:4  D4:4.  E4:8
+    A4:2  _:2
+    // B段 — 高潮
+    C5:4  D5:4  E5:4.  D5:8
+    C5:4  B4:4  A4:2
+    A4:4  B4:4  C5:4.  B4:8
+    A4:4  G#4:4  G#4:2
+    // 尾声
+    A4:4  B4:4  C5:4  D5:4
+    E5:4  D5:4  C5:4  B4:4
+    A4:4  G4:4  A4:4  B4:4
+    A4:1
+}
+
+// 轨道2: 长笛伴奏
+track "flute" {
+    instrument "flute"
+    velocity 70
+    // A段
+    _:1
+    _:2  C5:4  D5:4
+    _:1
+    _:2  A4:4  B4:4
+    // A段重复
+    _:1
+    _:2  A4:4  B4:4
+    _:1
+    _:1
+    // B段
+    E5:2  _:2
+    _:2  E5:4  D5:4
+    E5:2  _:2
+    _:2  D5:4  E5:4
+    // 尾声
+    _:2  E5:2
+    G5:4  F5:4  E5:2
+    C5:4  B4:4  C5:4  D5:4
+    C5:1
+}
+
+// 轨道3: 弦乐和弦（变量复用）
+track "strings" {
+    instrument "strings"
+    velocity 60
+    // A段
+    Am Em
+    F C
+    Am Em
+    F E
+    // A段重复
+    Am Em
+    F C
+    Dm E
+    Am Am
+    // B段
+    F G
+    Am Em
+    F G
+    Dm E
+    // 尾声
+    Am G
+    F C
+    Dm Em
+    Am Am
+}
+
+// 轨道4: 大提琴低音线
+track "cello" {
+    instrument "cello"
+    velocity 65
+    // A段
+    A2:2  E2:2
+    F2:2  C3:2
+    A2:2  E2:2
+    F2:2  E2:2
+    // A段重复
+    A2:2  E2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:2  A2:2
+    // B段
+    F2:2  G2:2
+    A2:2  E2:2
+    F2:2  G2:2
+    D3:2  E2:2
+    // 尾声
+    A2:2  G2:2
+    F2:2  C3:2
+    D3:2  E2:2
+    A2:1
+}
