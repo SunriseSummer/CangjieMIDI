@@ -29,16 +29,6 @@ class NoteTokenResult {
     }
 }
 
-// 和弦解析结果：chord 为和弦信息，newPos 为消耗后的位置
-class ChordParseResult {
-    var chord: ChordInfo
-    var newPos: Int64
-    init(chord: ChordInfo, newPos: Int64) {
-        this.chord = chord
-        this.newPos = newPos
-    }
-}
-
 // ── 字符判断工具 ──
 
 // 获取音名对应的半音偏移（C=0, D=2, E=4, F=5, G=7, A=9, B=11）

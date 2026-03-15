@@ -1,0 +1,22 @@
+// 生日快乐 — 双轨编曲
+tempo 120
+
+track melody {
+    instrument "piano"
+    G4:8  G4:8  A4:4  G4:4
+    C5:4  B4:2
+    G4:8  G4:8  A4:4  G4:4
+    D5:4  C5:2
+    G4:8  G4:8  G5:4  E5:4
+    C5:4  B4:4  A4:4
+    F5:8  F5:8  E5:4  C5:4
+    D5:4  C5:2
+}
+
+track bass {
+    instrument "bass"
+    C3:2  G3:2
+    C3:2  G3:2
+    C3:2  E3:2
+    F3:2  C3:2
+}
